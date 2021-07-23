@@ -7,25 +7,28 @@
   <h2 class="title"><a href="/">{{title}}</a></h2>
 </header>
 
-<!-- form for adding link  -->
-<form class="link-form">   
-  <h2>Add link</h2>
+<div class="container"> 
 
-  <div class="field"> 
-    <label for="title">Title:</label>
-    <input name="title" id="title" type="text" #newTitle>
-  </div>
-  <div class="field">
-    <label for="link" >Link:</label>
-    <input type="text" id="link" name="link" #newLink/>
-  </div>
-
-  <button class="add-btn" (click)="addArticle(newTitle, newLink)">Submit Link </button>
-</form>
-
-<!-- form end here -->
-
-
-<!-- <app-user-list></app-user-list> -->
-
+  
+  <!-- form for adding link  -->
+  <form class="link-form">   
+    <h2>Add link</h2>
+    
+    <div class="field"> 
+      <label for="title">Title:</label>
+      <input name="title" id="title" type="text" #newTitle>
+    </div>
+    <div class="field">
+      <label for="link" >Link:</label>
+      <input type="text" id="link" name="link" #newLink/>
+    </div>
+    
+    <button class="add-btn" (click)="addArticle(newTitle, newLink)">Submit Link </button>
+  </form>
+  
+  <!-- form end here -->
+  
+  
+  <app-article></app-article>
+</div>
 <router-outlet></router-outlet>
