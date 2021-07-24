@@ -21,7 +21,7 @@ export class Article {
       const domainAndPath = this.link.split('//')[1];
       return domainAndPath.split('/')[0];
     } catch (error) {
-      console.log('something went wrong');
+      console.log('something went wrong (undefined)', error);
       return null;
     }
   }

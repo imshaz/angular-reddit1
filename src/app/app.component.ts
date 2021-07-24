@@ -20,6 +20,12 @@ export class AppComponent {
     console.log('addArticle', title.value, link.value);
     if (title.value != '' && link.value != '')
       this.articles.push(new Article(title.value, link.value, 0));
+    title.value = '';
+    link.value = '';
     return false;
+  }
+
+  sortArticles(): Article[] {
+    return this.articles.sort((a: Article, b: Article) => b.votes - a.votes);
   }
 }
