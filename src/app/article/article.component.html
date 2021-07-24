@@ -1,20 +1,22 @@
 <div class="article">
   <div class="left-section">
-    <span class="votes-count">3</span>
+    <span class="votes-count">{{ article.votes }}</span>
     <span class="points">points</span>
   </div>
   <div class="right-section">
     <div class="article-header">
-      <h3 class="title">Angular.js</h3>
-      <a href="" class="description">(angular.io)</a>
+      <h3 class="title">{{ article.title }}</h3>
+      <a target="_blank" href="{{ article.link }}" class="description">{{
+        getDomain()
+      }}</a>
     </div>
 
     <div class="votes">
-      <div class="up-vote">
+      <div class="up-vote" (click)="upVote()">
         <img src="../../assets/images/outline_expand_less_black_24dp.png" />
         <span>up-vote</span>
       </div>
-      <div class="down-vote">
+      <div class="down-vote" (click)="downVote()">
         <img src="../../assets/images/outline_expand_more_black_24dp.png" />
         <span>down vote</span>
       </div>
